@@ -11,6 +11,7 @@
     <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile-style.css">
 
     <style>
         .none{
@@ -49,7 +50,7 @@
             <hr class=" my-4" style="border:1px dashed #fff">
             <p class="text-center text-light"> {{ filter }} 共有 {{ filteredItems.length }}</p>
             <main class="displayData">
-                <b-list-group :class="display" class="mx-auto w-75">
+                <b-list-group :class="display" class="mx-auto moblieSize">
                     <b-list-group-item  v-for="(item, index) in filteredItems">
                         <b-form-checkbox style="display:inline-block;" size="lg" class="" @change="toggle(item)" :checked="item.done" type="checkbox">
                             <span v-if="!item.edit" :class="{del: item.done}" @dblclick="edit(item)">{{item.times}} :
