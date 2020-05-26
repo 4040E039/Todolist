@@ -31,22 +31,22 @@
             </header>
             <hr class=" my-3" style="border:1px dashed #fff">
             <div class="button-group">
-                <b-button-group>
+                <b-button-group class="mt-2">
                     <b-button variant="info" @click="filter = '顯示全部'">顯示全部</b-button>
                     <b-button variant="info"  @click="filter = '已完成'">已完成</b-button>
                     <b-button variant="info" @click="filter = '未完成'">未完成</b-button>
                 </b-button-group>
-                <b-button-group class="">
+                <b-button-group class="mt-2">
                     <b-button variant="danger" @click="del('顯示全部')">刪除全部</b-button>
                     <b-button variant="danger" @click="del('已完成')">刪除完成</b-button>
                     <b-button variant="danger" @click="del('未完成')">刪除未完成</b-button>
                 </b-button-group>
-                <b-button-group class="">
+                <b-button-group class="mt-2">
                     <b-button @click="done(true)">標記全部已完成</b-button>
                     <b-button @click="done(false)">標記全部未完成</b-button>
                 </b-button-group>
             </div>
-            <hr class=" my-3" style="border:1px dashed #fff">
+            <hr class=" my-4" style="border:1px dashed #fff">
             <p class="text-center text-light"> {{ filter }} 共有 {{ filteredItems.length }}</p>
             <main class="displayData">
                 <b-list-group :class="display" class="mx-auto w-75">
