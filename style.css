@@ -19,7 +19,7 @@
 }
 * #app {
   background-image: linear-gradient(to right, #434343 0%, #000 100%);
-  height: 100vh;
+  min-height: 100vh;
 }
 * #app .list-group {
   border: 1px solid #000;
