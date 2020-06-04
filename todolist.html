@@ -178,7 +178,7 @@
                                 })
                                 break
                         }
-                    },
+                    }
                 },
                 watch: {
                     newitem(newValue, oldValue) {
@@ -193,8 +193,10 @@
                 },
                 mounted() {
                     const data = JSON.parse(localStorage.getItem('todo'))
-                    if (data !== null || data !== '') {
+                    if (data !== null && data !== '') {
                         this.items = data
+                    } else {
+                        localStorage.setItem('todo', JSON.stringify(this.items))
                     }
                 }
 
